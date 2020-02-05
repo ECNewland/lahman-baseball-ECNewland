@@ -3,9 +3,9 @@ Find all players in the db who played for Vanderbilt University.
 Create a list showing each player's first and last names, as well as the total salary they earned in the major leagues.
 Sort this list in descending order by total salary earned.
 Which Vanderbilt player earned teh most money in the majors?
-A. David Price, $30,000,000.
+A. David Price, $245,553,888.
 */
-SELECT p.playerid, p.nameFirst, p.nameLast, cp.schoolid, s.salary, sch.schoolname
+SELECT p.playerid, p.nameFirst, p.nameLast, cp.schoolid, SUM(s.salary) AS salary, sch.schoolname
 FROM people AS p
 INNER JOIN collegeplaying as cp
 USING (playerid)
@@ -14,6 +14,7 @@ USING (playerid)
 JOIN schools AS sch
 USING (schoolid)
 WHERE schoolid = 'vandy'
+GROUP BY p.playerid, p.nameFirst, p.nameLast, cp.schoolid, sch.schoolname
 ORDER BY salary DESC;
 
 /* Question_2
