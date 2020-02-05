@@ -2,9 +2,9 @@
 Find all players in the db who played for Vanderbilt University.
 Create a list showing each player's first and last names, as well as the total salary they earned in the major leagues.
 Sort this list in descending order by total salary earned.
-A. 
+Which Vanderbilt player earned teh most money in the majors?
+A. David Price, $30,000,000.
 */
-
 SELECT p.playerid, p.nameFirst, p.nameLast, cp.schoolid, s.salary, sch.schoolname
 FROM people AS p
 INNER JOIN collegeplaying as cp
@@ -13,8 +13,8 @@ JOIN salaries AS s
 USING (playerid)
 JOIN schools AS sch
 USING (schoolid)
+WHERE schoolid = 'vandy'
 ORDER BY salary DESC;
-
 
 /* Question_2
 Find the name and height of the shortest player in the database.
