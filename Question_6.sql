@@ -4,9 +4,7 @@ where success is measured as the percentage of stolen base attempts which are su
 (A stolen base attempt results either in a stolen base or being caught stealing.)
 Consider only players who attempted at least 20 stolen bases.
 A. Jonathan Villar, 1.29 attempts per game.
-QUERY: 
-NEXT STEPS:
-Check aliases for correct callouts.
+QUERY:
 */
 SELECT p.playerid, p.nameFirst, p.nameLast, b.yearid,
 	SUM(b.sb) AS StolenBases,
