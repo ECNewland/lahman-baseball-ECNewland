@@ -3,7 +3,7 @@ Find the player who had the most success stealing bases in 2016,
 where success is measured as the percentage of stolen base attempts which are successful.
 (A stolen base attempt results either in a stolen base or being caught stealing.)
 Consider only players who attempted at least 20 stolen bases.
-A. 
+A. Jonathan Villar, 1.29 attempts per game.
 QUERY: 
 NEXT STEPS:
 Check aliases for correct callouts.
